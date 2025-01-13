@@ -1,4 +1,7 @@
-body, h1, form, section {
+body,
+h1,
+form,
+section {
     margin: 0;
     padding: 0;
 }
@@ -23,19 +26,20 @@ body, h1, form, section {
 .header h1 {
     font-size: 3rem;
     font-weight: bold;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-family: 'dune rise', sans-serif;
 }
 
 .main {
     margin-top: 2rem;
+    padding-bottom: 5rem;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-image: url(https://images.surfacemag.com/app/uploads/2021/10/26180457/dune-2021-remake-02.jpg);
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
     /* width: 100vw; */
@@ -79,7 +83,7 @@ section {
     box-shadow: 0 4px 8px grey !important;
     transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
     transition: transform 0.3s ease-in-out;
-    
+
 }
 
 .card:hover {
@@ -93,8 +97,8 @@ section {
 } */
 
 .card h1 {
-    font-family: 'dune rise', sans-serif; 
-    
+    font-family: 'dune rise', sans-serif;
+
 }
 
 .footer {
@@ -111,20 +115,20 @@ section {
     bottom: 0;
 }
 
-.card
-{
+.card {
     /* height: 300px ; */
     text-align: center;
-    background: linear-gradient( rgba(73, 174, 241, 0.70),rgb(223, 147, 47));
+    background: linear-gradient(rgba(73, 174, 241, 0.70), rgb(223, 147, 47));
     border: none;
     cursor: pointer;
     min-height: 200px;
     margin-bottom: 10rem;
 }
-.card *
-{
-    line-height: 60px ;
+
+.card * {
+    line-height: 60px;
 }
+
 /* .errorDisplay
 {
    font-size: 2.5rem;
@@ -134,7 +138,8 @@ section {
 
 @media (max-width: 768px) {
     .header {
-        width: 95%; /* Adjust width for tablets */
+        width: 95%;
+        /* Adjust width for tablets */
         margin: 10px auto;
     }
 
@@ -149,7 +154,8 @@ section {
 
 @media (max-width: 480px) {
     .header {
-        width: 100%; /* Adjust width for phones */
+        width: 100%;
+        /* Adjust width for phones */
         margin: 5px auto;
     }
 
@@ -167,18 +173,17 @@ section {
     --text-color: black;
 }
 
-body {
+/* body {
     background-color: var(--background-color);
     color: var(--text-color);
-}
+} */
 
 .dark-mode {
     --background-color: black;
     --text-color: white;
 }
 
-.toggleCovering
-{
+.toggleCovering {
     height: 34px;
     width: 61px;
     border-radius: 20px;
@@ -188,10 +193,10 @@ body {
     margin: 0 auto;
     position: bottom;
     top: 100px;
-    box-shadow: 0px 0px 34px 2px  rgb(110, 193, 241);
+    box-shadow: 0px 0px 34px 2px rgb(110, 193, 241);
 }
-.toggleInsideLight
-{
+
+.toggleInsideLight {
     content: "";
     position: relative;
     height: 24px;
@@ -202,11 +207,11 @@ body {
     /* left: 2px; */
     transform: translate(3px);
     transition: transform 0.2s linear;
-    background-image:url("./assets/sunnyDay.png");
+    background-image: url("./assets/sunnyDay.png");
     background-size: cover;
 }
-.toggleInsideDark
-{
+
+.toggleInsideDark {
     content: "";
     position: relative;
     height: 24px;
@@ -217,18 +222,19 @@ body {
     /* left: 2px; */
     transform: translateX(33px);
     transition: transform 0.2s linear;
-    background-image:url("./assets/night.png");
+    background-image: url("./assets/night.png");
     background-size: cover;
-.partCloudy
-{
+}
+
+.partCloudy {
     background-image: url(./assets/partCloudy.png);
     background-size: 120px;
     background-position: center;
     background-repeat: no-repeat;
     height: 200px;
 }
-.snow
-{
+
+.snow {
     background-image: url(./assets/snow.png);
     background-size: 120px;
     background-position: center;
@@ -236,8 +242,8 @@ body {
     height: 200px;
 
 }
-.clearSky
-{
+
+.clearSky {
     background-image: url(./assets/clear_sky.png);
     background-size: 120px;
     background-position: center;
@@ -245,8 +251,8 @@ body {
     height: 200px;
 
 }
-.fog
-{
+
+.fog {
     background-image: url(./assets/fog.png);
     background-size: 120px;
     background-position: center;
@@ -254,8 +260,8 @@ body {
     height: 200px;
 
 }
-.drizzle
-{
+
+.drizzle {
     background-image: url(./assets/drizzle.png);
     background-size: 120px;
     background-position: center;
@@ -263,8 +269,8 @@ body {
     height: 200px;
 
 }
-.freezDrizzle
-{
+
+.freezDrizzle {
     background-image: url(./assets/freezing_drizzle.png);
     background-size: 120px;
     background-position: center;
@@ -272,12 +278,11 @@ body {
     height: 200px;
 
 }
-.rain
-{
+
+.rain {
     background-image: url(./assets/rain.png);
     background-size: 120px;
     background-position: center;
     background-repeat: no-repeat;
     height: 200px;
-
 }
