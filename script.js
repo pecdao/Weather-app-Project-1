@@ -201,31 +201,49 @@ function displayWeatherInfo(data) {
     }
 }
 
-const btnCovering = document.getElementsByClassName('toggleCovering');
 const btnInside = document.getElementById('lightDarkBtn');
 const body = document.body;
 
+// Set your theme variables here (using color or image URL)
+const lightImage = "url('/images/light-background.jpg')";  // Light mode background image
+const darkImage = "url('/images/dark-background.jpg')";   // Dark mode background image
+const grayColor = "#EAE8FF";  // Light background color (can also be a color)
+const blackColor = "#2D3142";  // Dark background color
 
-let mode = "light";
+let mode = localStorage.getItem('mode') || "light";  // Get the stored theme or default to 'light'
 
-
-const lightDark = () => {
-    if (mode == "light") {
+// Function to apply the saved theme
+const applyTheme = () => {
+    if (mode === "light") {
+        btnInside.setAttribute('class', 'toggleInsideLight');
+        body.style.backgroundColor = grayColor;
+    } else {
         btnInside.setAttribute('class', 'toggleInsideDark');
-        body.style.backgroundImage = "url('./assets/blackhole.jpg')";
-        mode = "dark";
-        return mode;
+        body.style.backgroundColor = blackColor;
     }
-    if (mode == "dark") {
-        btnInside.setAttribute("class", 'toggleInsideLight');
-        body.style.backgroundImage = "url(https://images.surfacemag.com/app/uploads/2021/10/26180457/dune-2021-remake-02.jpg)";
-        mode = "light";
-        return mode;
-    }
-}
+};
 
+// Function to toggle light/dark mode
+const lightDark = () => {
+    if (mode === "light") {
+        btnInside.setAttribute('class', 'toggleInsideDark');
+        body.style.backgroundColor = blackColor;  // Set a dark background color
+        mode = "dark";
+    } else {
+        btnInside.setAttribute('class', 'toggleInsideLight');
+        body.style.backgroundColor = grayColor;  // Set a light background color
+        mode = "light";
+    }
+    localStorage.setItem('mode', mode);  // Save the mode to localStorage
+    return mode;
+};
+
+// Apply the theme when the page loads
+applyTheme();
+
+// Toggle mode when the button is clicked
 const toggleMode = () => {
-    btnInside.addEventListener('click', lightDark)
-}
+    btnInside.addEventListener('click', lightDark);
+};
 
 toggleMode();
