@@ -33,10 +33,10 @@ body, h1, form, section {
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(https://images.surfacemag.com/app/uploads/2021/10/26180457/dune-2021-remake-02.jpg);
-    background-size: cover;
+    /* background-image: url(https://images.surfacemag.com/app/uploads/2021/10/26180457/dune-2021-remake-02.jpg); */
+    /* background-size: cover;
     background-repeat: no-repeat; 
-    background-position: center;
+    background-position: center; */
     min-height: 100vh;
     /* width: 100vw; */
     color: #d49962;
